@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Stage Interactif - Jackson tengo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f7f4;
+            color: #334155;
+        }
+        .nav-link {
+            transition: color 0.3s ease, border-bottom-color 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #14b8a6;
+            border-bottom-color: #14b8a6;
+        }
+        .tab-btn.active {
+            background-color: #14b8a6;
+            color: #ffffff;
+        }
+        .tab-btn {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .skill-bar-fill {
+            transition: width 1.5s ease-in-out;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!--  en-tête de la page avec un menu de navigation responsive et un logo ou titre de l'ePortfolio  -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold text-slate-700"> ePortfolio de Stage</div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#accueil" class="nav-link pb-1">Accueil</a>
+                <a href="#projet" class="nav-link pb-1">Le Projet</a>
+                <a href="#entreprise" class="nav-link pb-1">L'Entreprise</a>
+                <a href="#contributions" class="nav-link pb-1">Contributions</a>
+                <a href="#bilan" class="nav-link pb-1">Bilan</a>
+            </div>
+        </nav>
+    </header>
+ 
+    <!--   notre page est divisé en plusieurs sections pour une meilleure lisibilité et navigation avec le conteneur principal et les sections -->
+    <main class="container mx-auto px-6 py-8 md:py-16">
+
+        <section id="accueil" class="text-center min-h-[60vh] flex flex-col justify-center items-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-slate-800 mb-4">Développeur Full-Stack</h1>
+            <p class="text-lg md:text-xl text-slate-600 mb-8 max-w-3xl">Rapport de stage sur la conception et le développement d'une application web moderne avec React et Django Rest Framework.</p>
+            <div class="flex flex-wrap justify-center items-center gap-4">
+                <span class="bg-teal-100 text-teal-800 text-sm font-medium px-4 py-2 rounded-full">React</span>
+                <span class="bg-sky-100 text-sky-800 text-sm font-medium px-4 py-2 rounded-full">Django Rest Framework</span>
+                <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">SQLlife</span>
+                <span class="bg-slate-100 text-slate-800 text-sm font-medium px-4 py-2 rounded-full">java</span>
+            </div>
+        </section>
+
+            <!-- section pour le projet et les missions et remerciements  -->
+        <section id="projet" class="py-16 md:py-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Le Projet & Mes Missions</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">L'objectif principal était de participer au développement d'un blog pour ecrire des articles sur les marchés , une plateforme innovante visant à mobilisé plus de jeune dans ce domaine du BTP.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-bold text-slate-700 mb-4">Mon Rôle : Développeur Full-Stack Junior</h3>
+                    <p class="text-slate-600 mb-6">En tant que membre de l'équipe de développement, j'ai eu la responsabilité de contribuer à la fois au back-end et au front-end de l'application.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-teal-500 mr-3 mt-1">✓</span>
+                            <span>Concevoir et implémenter des fonctionnalités back-end avec DRF.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-teal-500 mr-3 mt-1">✓</span>
+                            <span>Créer des interfaces utilisateur dynamiques et réactives avec React ce qui etait un peut difficile .</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-teal-500 mr-3 mt-1">✓</span>
+                            <span>Assurer une communication API fluide et sécurisée entre les deux systèmes.</span>
+                        </li>
+                        <li class="flex items-start">
+                             <span class="text-teal-500 mr-3 mt-1">✓</span>
+                            <span>Participer activement aux rituels agiles et aux revues de code.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center p-8">
+                     <h3 class="text-2xl font-bold text-slate-700 mb-4">Remerciements</h3>
+                     <p class="text-slate-600 italic">"J'adresse mes plus sincères remerciements aux personnes qui m'ont accompagné tout au long de cette période. Je suis particulièrement redevable à ma sœur et à son fiancé pour leur soutien financier inestimable, qui m'a donné la chance de poursuivre cette opportunité professionnelle. Je tiens également à exprimer ma gratitude à mes parents pour leur soutien moral constant, ainsi qu'à mes professeurs, Monsieur Noha et Monsieur Léon, pour leur encadrement et leurs conseils avisés."</p>
+                </div>
+            </div>
+        </section>
+        <!--  presentation de l'entreprise avec les sections historique et organisation--> 
+        <section id="entreprise" class="py-16 md:py-24 bg-white rounded-2xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Présentation de l'Entreprise</h2>
+                <p class="mt-4 text-lg text-slate-600">le cabinet Dawimy</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-slate-700 mb-3">Historique & Activité</h3>
+                    <p class="text-slate-600">Fondée en janvier 2023 , le cabinet Dawimy est une société spécialisée dans les BTP . Elle est aujourd'hui un acteur clé sur le marché de de la construction , reconnue pour son innovation.</p>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-slate-700 mb-3">Organisation & Structure</h3>
+                    <p class="text-slate-600">J'ai été intégré au département [Nom du service], au sein d'une équipe de [Nombre de personnes] développeurs. Cette structure m'a permis de collaborer étroitement avec des experts et d'apprendre de leur expérience.</p>
+                </div>
+            </div>
+        </section>
+         <!--  section pour les contributions techniques et les compétences acquises --> 
+        <section id="contributions" class="py-16 md:py-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Contributions Techniques</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">Explorez mes contributions spécifiques à l'architecture, au back-end et au front-end du projet.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="flex justify-center border-b border-slate-200 mb-8">
+                    <button data-tab="architecture" class="tab-btn px-6 py-3 font-medium text-slate-600 hover:text-teal-600 active">Architecture</button>
+                    <button data-tab="backend" class="tab-btn px-6 py-3 font-medium text-slate-600 hover:text-teal-600">Back-end (DRF)</button>
+                    <button data-tab="frontend" class="tab-btn px-6 py-3 font-medium text-slate-600 hover:text-teal-600">Front-end (React)</button>
+                </div>
+
+                <div id="tab-content" class="bg-white p-8 rounded-xl shadow-md">
+                    <div id="architecture" class="content-section active">
+                        <h3 class="text-2xl font-bold text-slate-700 mb-4">Architecture Client-Serveur</h3>
+                        <p class="text-slate-600 mb-8">Le projet repose sur une architecture découplée, où le front-end React (client) est indépendant du back-end DRF (serveur). Ils communiquent via une API RESTful, ce qui assure flexibilité et maintenabilité.</p>
+                        <div class="chart-container relative mx-auto h-80 max-h-[350px] max-w-2xl">
+                            <div class="flex flex-col md:flex-row justify-around items-center h-full space-y-4 md:space-y-0 md:space-x-4">
+                                <div class="text-center p-4 border-2 border-sky-300 rounded-lg bg-sky-50">
+                                    <div class="font-bold text-sky-800">Client (Navigateur)</div>
+                                    <div class="text-sm text-sky-600">React App</div>
+                                </div>
+                                <div class="font-mono text-teal-600 text-2xl font-bold">&lt;=&gt;</div>
+                                <div class="text-center p-4 border-2 border-teal-300 rounded-lg bg-teal-50">
+                                    <div class="font-bold text-teal-800">API REST</div>
+                                    <div class="text-sm text-teal-600">Requêtes HTTP</div>
+                                </div>
+                                <div class="font-mono text-teal-600 text-2xl font-bold">=&gt;</div>
+                                <div class="text-center p-4 border-2 border-indigo-300 rounded-lg bg-indigo-50">
+                                    <div class="font-bold text-indigo-800">Serveur</div>
+                                    <div class="text-sm text-indigo-600">Django / DRF</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="backend" class="content-section">
+                        <h3 class="text-2xl font-bold text-slate-700 mb-4">Développement de l'API avec DRF</h3>
+                        <p class="text-slate-600 mb-6">Mon travail sur le back-end a consisté à construire une API robuste, sécurisée et performante.</p>
+                        <ul class="space-y-3 list-disc list-inside text-slate-600">
+                            <li>**Modélisation des données :** Définition des modèles Django pour structurer les informations de l'application.</li>
+                            <li>**Création de Vues d'API :** Implémentation de `ViewSets` et de `Serializers` pour exposer les données via des endpoints clairs.</li>
+                            <li>**Authentification & Permissions :** Mise en place de jetons JWT pour sécuriser les endpoints et contrôler l'accès aux données.</li>
+                            <li>**Tests et optimisation :** Rédaction de tests pour garantir la fiabilité de l'API.</li>
+                        </ul>
+                    </div>
+                    <div id="frontend" class="content-section">
+                        <h3 class="text-2xl font-bold text-slate-700 mb-4">Développement de l'UI avec React</h3>
+                        <p class="text-slate-600 mb-6">Côté front-end, l'objectif était de créer une expérience utilisateur fluide et intuitive.</p>
+                        <ul class="space-y-3 list-disc list-inside text-slate-600">
+                            <li>**Architecture par composants :** Développement de composants réutilisables (`navbar`, `footer`) pour une meilleure maintenabilité.</li>
+                            <li>**Gestion de l'état :** Utilisation des hooks `useState` et `useEffect` pour l'état local, et `Context API` pour l'état global.</li>
+                            <li>**Consommation d'API :** Implémentation de la logique de communication avec le back-end (via `axios`) en gérant les états de chargement et les erreurs.</li>
+                            <li>**Routing :** Mise en place de la navigation côté client avec `React Router`.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section pour le bilan et les compétences acquises *  --> 
+        <section id="bilan" class="py-16 md:py-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800">Bilan & Compétences Acquises</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">Ce stage a été une opportunité unique de transformer mes connaissances académiques en compétences professionnelles concrètes.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-bold text-slate-700 mb-6">Compétences Techniques</h3>
+                    <div class="space-y-5">
+                        <div>
+                            <p class="font-medium mb-1">React & Ecosystème</p>
+                            <div class="w-full bg-slate-200 rounded-full h-2.5">
+                                <div class="skill-bar-fill bg-teal-500 h-2.5 rounded-full" style="width: 0%" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="font-medium mb-1">Django Rest Framework</p>
+                            <div class="w-full bg-slate-200 rounded-full h-2.5">
+                                <div class="skill-bar-fill bg-teal-500 h-2.5 rounded-full" style="width: 0%" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="font-medium mb-1">JavaScript (ES6+)</p>
+                            <div class="w-full bg-slate-200 rounded-full h-2.5">
+                                <div class="skill-bar-fill bg-teal-500 h-2.5 rounded-full" style="width: 0%" data-width="95%"></div>
+                            </div>
+                        </div>
+                         <div>
+                            <p class="font-medium mb-1">HTML5 & CSS3</p>
+                            <div class="w-full bg-slate-200 rounded-full h-2.5">
+                                <div class="skill-bar-fill bg-teal-500 h-2.5 rounded-full" style="width: 0%" data-width="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-slate-700 mb-4">Points Forts & Améliorations</h3>
+                    <p class="text-slate-600 mb-4"><strong>Point Fort :</strong> Ma capacité d'adaptation et ma proactivité dans la résolution de problèmes techniques ont été des atouts majeurs.</p>
+                    <p class="text-slate-600"><strong>Pistes d'amélioration :</strong> Je souhaite désormais approfondir mes connaissances en matière de tests automatisés (unitaires, e2e) et de déploiement continu (CI/CD) pour maîtriser l'ensemble du cycle de vie d'un projet.</p>
+                    <h3 class="text-2xl font-bold text-slate-700 mt-8 mb-4">Conclusion</h3>
+                    <p class="text-slate-600">Cette expérience a solidifié ma passion pour le développement web et m'a préparé à relever les défis de ma future carrière professionnelle.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>Rapport de stage réalisé par :jackson Tengo</p>
+            <p class="text-sm text-slate-400 mt-2">Période : 7 juillet  au  7 aout 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            tabs.forEach(tab => { // ajoutons un écouteur d'événement pour chaque bouton de tabulation
+                tab.addEventListener('click', () => {
+                    const targetId = tab.dataset.tab;
+                    
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    contentSections.forEach(section => {
+                        section.classList.remove('active');
+                        if (section.id === targetId) {
+                            section.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.3
+            };
+
+            const skillObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const skillBars = entry.target.querySelectorAll('.skill-bar-fill');
+                        skillBars.forEach(bar => {
+                            bar.style.width = bar.dataset.width;
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const bilanSection = document.querySelector('#bilan');
+            if (bilanSection) {
+                skillObserver.observe(bilanSection);
+            }
+            
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main > section');
+
+            const navObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.toggle('active', link.getAttribute('href').substring(1) === entry.target.id);
+                        });
+                    }
+                });
+            }, { rootMargin: "-50% 0px -50% 0px" });
+
+            sections.forEach(section => {
+                navObserver.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>
